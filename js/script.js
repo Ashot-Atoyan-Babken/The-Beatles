@@ -27,8 +27,7 @@ about.insertAdjacentHTML("beforeend", "<button class='beatles'>Про Битлз
 let btn = document.querySelector(".beatles")
 btn.classList.add("button")
 
-btn.addEventListener("contextmenu", function (e) {
-   e.preventDefault()
+setTimeout(() => {
    btn.insertAdjacentHTML("afterend", "<a href='https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%BD%D0%BD%D0%BE%D0%BD,_%D0%94%D0%B6%D0%BE%D0%BD' target='_blank'><div class='john disable'><p>читайте о Джоне Ленноне</p></div></a>")
    let john = document.querySelector(".john")
    john.insertAdjacentHTML("afterend", "<a href='https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BA%D0%BA%D0%B0%D1%80%D1%82%D0%BD%D0%B8,_%D0%9F%D0%BE%D0%BB' target='_blank'><div class='Paul disable'><p>читайте о Поле Маккартни</p></div></a>")
@@ -40,7 +39,9 @@ btn.addEventListener("contextmenu", function (e) {
    let george = document.querySelector(".george")
    george.classList.add("Paul")
 
-})
+}, 10);
+
+
 
 
 btn.addEventListener("click", function (e) {
